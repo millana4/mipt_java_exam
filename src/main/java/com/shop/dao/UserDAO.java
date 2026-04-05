@@ -1,7 +1,7 @@
 package com.shop.dao;
 
 import com.shop.model.User;
-import com.shop.utils.DBConnection;
+import com.shop.util.DBConnection;
 import java.sql.*;
 
 public class UserDAO {

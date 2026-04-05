@@ -1,7 +1,7 @@
 package com.shop.dao;
 
 import com.shop.model.Category;
-import com.shop.utils.DBConnection;
+import com.shop.util.DBConnection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.shop.utils;
+package com.shop.util;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import java.sql.Connection;
