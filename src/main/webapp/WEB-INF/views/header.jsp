@@ -49,6 +49,7 @@
         </c:when>
         <c:otherwise>
             <span class="user-info">Привет, ${sessionScope.user.login}!</span>
+            <a href="${pageContext.request.contextPath}/orders">Мои заказы</a>
             <a href="${pageContext.request.contextPath}/logout">Выход</a>
         </c:otherwise>
     </c:choose>
