@@ -30,7 +30,7 @@ public class ProductDAO {
 
     //Найти товар
     public Product findById(int id) throws SQLException {
-        String sql = "SELECT * FROM product WHERE id = ?";
+        String sql = "SELECT * FROM products WHERE id = ?";
         try (Connection conn = DBConnection.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, id);
@@ -46,7 +46,7 @@ public class ProductDAO {
     //Найти товары по категории
     public List<Product> findByCategory(int categoryId) throws SQLException {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE category_id = ?";
+        String sql = "SELECT * FROM products WHERE category_id = ?";
         try (Connection conn = DBConnection.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, categoryId);
