@@ -28,7 +28,7 @@ public class OrderItemDAO {
     public List<OrderItem> findByOrderId(int orderId) {
         List<OrderItem> items = new ArrayList<>();
         String sql = "SELECT oi.id, oi.order_id, oi.product_id, oi.quantity, oi.price_at_time, oi.created_at, " +
-                "p.id as p_id, p.name, p.description, p.price, p.category_id " +
+                "p.id as p_id, p.name, p.description, p.price, p.category_id, p.created_at as p_created, p.updated_at as p_updated " +
                 "FROM order_items oi " +
                 "JOIN products p ON oi.product_id = p.id " +
                 "WHERE oi.order_id = ?";
@@ -48,12 +48,11 @@ public class OrderItemDAO {
                 item.setPriceAtTime(rs.getBigDecimal("price_at_time"));
                 item.setCreatedAt(rs.getTimestamp("created_at"));
 
-                // Создаём объект Product из JOIN
                 Product product = new Product();
                 product.setId(rs.getInt("p_id"));
                 product.setName(rs.getString("name"));
                 product.setDescription(rs.getString("description"));
-                product.setPrice(rs.getBigDecimal("p_price"));
+                product.setPrice(rs.getBigDecimal("price"));
                 product.setCategoryId(rs.getInt("category_id"));
 
                 item.setProduct(product);
