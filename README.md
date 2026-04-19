@@ -12,9 +12,7 @@
 
 ## Демонстрация работы приложения
 
-[![Видео демонстрация](./docs/video_preview.png)](./docs/Demo_CK_Java_exam_Ecommerce.mp4)
-
-> [Скачать видеодемонстрацию](./docs/Demo_CK_Java_exam_Ecommerce.mp4)
+📹 [Смотреть видео демонстрацию на Google Drive](https://drive.google.com/file/d/12YPiRqkxIGYL26dKMcLVNKgsNYwm0u9Z/view?usp=sharing)
 
 ---
 
